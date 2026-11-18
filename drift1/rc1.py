@@ -1,3 +1,6 @@
+# Copyright (c) 2026, Karan Kapur, with Reserved Font Name "Nitor".
+# This file is part of the Nitor Font Software, licensed under the
+# SIL Open Font License, Version 1.1 (see OFL.txt).
 """D1 RC1: final private-proof candidate + QA. Glyph OUTLINES ARE FROZEN (the
 approved phone2 shapes); RC1 only adds collision kerning, the final internal
 name, and runs QA. Existing fontTools 4.39.4 only.

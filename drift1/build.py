@@ -1,3 +1,6 @@
+# Copyright (c) 2026, Karan Kapur, with Reserved Font Name "Nitor".
+# This file is part of the Nitor Font Software, licensed under the
+# SIL Open Font License, Version 1.1 (see OFL.txt).
 """Build the D1 PRIVATE PROOF variable font (wght 100-900) + static instances,
 with the existing fontTools 4.39.4 run as-is. Masters: thin (default, wght
 100) and bold (wght 900); point structure is shared so they interpolate.

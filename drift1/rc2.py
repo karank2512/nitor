@@ -1,3 +1,6 @@
+# Copyright (c) 2026, Karan Kapur, with Reserved Font Name "Nitor".
+# This file is part of the Nitor Font Software, licensed under the
+# SIL Open Font License, Version 1.1 (see OFL.txt).
 """D1 RC2 proof: RC1 + ONE correctness fix (ampersand diagonal end tick).
 Name NOT chosen; internal work-in-progress naming only. Writes ONLY to
 drift1/out/rc2/ (RC1 and all originals untouched; glyphs.py untouched - the

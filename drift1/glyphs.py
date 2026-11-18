@@ -1,5 +1,8 @@
-"""D1 - reverse-contrast "scanline" display face (PRIVATE PROOF, working
-internal name only, uncommitted, not a release).
+# Copyright (c) 2026, Karan Kapur, with Reserved Font Name "Nitor".
+# This file is part of the Nitor Font Software, licensed under the
+# SIL Open Font License, Version 1.1 (see OFL.txt).
+"""D1 - reverse-contrast "scanline" display face: the glyph source of Nitor
+("D1" is the internal working name of this source).
 
 A new original direction after S3 was judged too formal. These are original
 drawings, made in this lane; they are not traced or derived from any existing

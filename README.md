@@ -7,8 +7,10 @@ inverted: the verticals are hairlines and the horizontals carry the weight.
 Wherever strokes meet or bottom out, a horizontal band sits there, so as the
 weight increases the letters build up like stacked scanlines.
 
-Status: **private proof. No licence has been granted yet, and the copyright
-holder is still to be confirmed.** See [LICENSE](LICENSE).
+Status: **the fonts, their build source and the font documentation are
+licensed under the SIL Open Font License 1.1, with Reserved Font Name "Nitor". The specimen images and
+video are not licensed. This repository is private and not publicly
+released.** See [LICENSE](LICENSE) and [OFL.txt](OFL.txt).
 
 ![Nitor specimen](images/nitor-specimen.png)
 
@@ -53,9 +55,8 @@ tables as its TTF.
 
 ## Installing
 
-No licence has been granted, so no permission is given to use, install or
-embed these fonts until the owner decides on a licence. The installation and
-web steps below describe how they would be used once a licence allows it.
+The fonts are licensed under the SIL Open Font License 1.1 (see
+[OFL.txt](OFL.txt)), which allows installing and embedding them.
 
 - **macOS:** double-click a `.ttf` file and choose *Install Font* in Font Book.
 - **Windows:** right-click a `.ttf` file and choose *Install*.
@@ -88,7 +89,8 @@ files from.
 
 [`video/Nitor-specimen.mp4`](video/Nitor-specimen.mp4): 24.5 seconds,
 1080 × 1350, 30 fps, silent, 18.5 MB. Only the virtual camera and the real
-weight axis move; the letters are the font itself.
+weight axis move; the letters are the font itself. The video and the specimen
+images are not covered by the font licence.
 
 ![Still from the specimen video](images/nitor-video-still.png)
 
@@ -104,7 +106,7 @@ P=python3.11   # the Python that has fontTools and Pillow
 $P -B drift1/build.py          # draws both masters, builds the variable font
 $P -B drift1/rc1.py            # adds collision kerning and runs QA
 $P -B drift1/rc2.py            # applies the ampersand fix, same kerning
-$P -B nitor/build_nitor.py     # sets the Nitor names -> nitor/out/fonts/
+$P -B nitor/build_nitor.py     # sets names and licence metadata -> nitor/out/fonts/
 
 # web fonts (WOFF, same tables as the TTFs)
 $P -B -c "
@@ -137,5 +139,15 @@ direction was chosen, are kept in [`stage0/`](stage0/), [`r4/`](r4/) and
 
 ## Licence
 
-No licence has been granted; see [LICENSE](LICENSE). Copyright holder: to be
-confirmed.
+Copyright (c) 2026, Karan Kapur, with Reserved Font Name "Nitor".
+
+- **Fonts** (`fonts/`), **font build source** (`drift1/glyphs.py`,
+  `drift1/build.py`, `drift1/rc1.py`, `drift1/rc2.py`, `nitor/build_nitor.py`)
+  and **font documentation** (this README, `DESIGN.md`, `nitor/README.md`):
+  SIL Open Font License, Version 1.1. See [OFL.txt](OFL.txt).
+- **Specimen images** (`images/`), **specimen video** (`video/`, made by
+  `nitor/video/`) and everything else in this repository: not licensed; no
+  permission is granted.
+
+The full scope is in [LICENSE](LICENSE). The copyright notice states the
+claimed holder; it is not a certification of legal ownership.

@@ -1,9 +1,28 @@
-Nitor - licence status
+Nitor - licensing
 
-No licence has been granted for the Nitor fonts, images, video or source
-files in this repository.
+Copyright (c) 2026, Karan Kapur, with Reserved Font Name "Nitor".
 
-Until a licence is chosen and added here, no permission to use, copy, modify
-or distribute them is given.
+1. Licensed under the SIL Open Font License, Version 1.1 (full text in OFL.txt)
 
-Copyright holder: to be confirmed.
+   The Nitor Font Software:
+   - the font files in fonts/ (variable, static and web fonts);
+   - the font build source: drift1/glyphs.py, drift1/build.py,
+     drift1/rc1.py, drift1/rc2.py and nitor/build_nitor.py;
+   - the font documentation: README.md, DESIGN.md and nitor/README.md.
+
+   "Nitor" is a Reserved Font Name: modified versions of the fonts may not
+   use it as their primary font name without written permission.
+
+2. Not licensed - no permission is granted
+
+   Everything else in this repository, in particular:
+   - the specimen images in images/;
+   - the specimen video in video/ and its scripts in nitor/video/;
+   - the earlier exploration and tooling in stage0/, r4/, diag/ and the
+     other files in drift1/.
+
+   These are kept separate from the Font Software and are not covered by
+   the SIL Open Font License.
+
+The copyright notice states the claimed holder; it is not a certification
+of legal ownership.

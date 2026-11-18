@@ -1,8 +1,10 @@
-"""Nitor final font files: the accepted D1 RC2 font with its family name set to
-Nitor (user selection 2026-11-18 18:49 NZDT). NAME/METADATA ONLY - outlines,
-variations, metrics, cmap and kerning are copied byte-for-byte from RC2 and
-verified below. Copyright and licence records are left as they were (the name
-selection is not a licence grant).
+# Copyright (c) 2026, Karan Kapur, with Reserved Font Name "Nitor".
+# This file is part of the Nitor Font Software, licensed under the
+# SIL Open Font License, Version 1.1 (see OFL.txt).
+"""Nitor final font files: the accepted RC2 font with the Nitor family names,
+copyright notice, SIL Open Font License 1.1 records and installable embedding
+set. NAME/METADATA ONLY - outlines, variations, metrics, cmap and kerning are
+copied byte-for-byte from RC2 and verified below.
 
 Inputs : RC2 variable font (default drift1/out/rc2/DriftD1-RC2-VF.ttf, or $NITOR_SRC)
 Outputs: $NITOR_OUT (default nitor/out/fonts):
@@ -20,9 +22,15 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 LANE = os.path.dirname(HERE)
 SRC = os.environ.get('NITOR_SRC', os.path.join(LANE, 'drift1', 'out', 'rc2', 'DriftD1-RC2-VF.ttf'))
 OUT = os.environ.get('NITOR_OUT', os.path.join(HERE, 'out', 'fonts'))
-FAMILY, VERSION = 'Nitor', 'Version 1.000'
-DESCRIPTION = 'Nitor - reverse-contrast variable display face (wght 100-900). Private; not a public release.'
-OLD_TOKENS = ('Drift', 'D1', 'RC1', 'RC2', 'PrivateProof', 'variable proof', 'exploratory')
+FAMILY, VERSION = 'Nitor', 'Version 1.001'
+DESCRIPTION = 'Nitor - reverse-contrast variable display face (wght 100-900).'
+COPYRIGHT = 'Copyright (c) 2026, Karan Kapur, with Reserved Font Name "Nitor".'
+LICENSE_DESC = ('This Font Software is licensed under the SIL Open Font License, Version 1.1. '
+                'This license is available with a FAQ at: https://openfontlicense.org')
+LICENSE_URL = 'https://openfontlicense.org'
+FS_TYPE = 0   # installable embedding, as the OFL permits
+OLD_TOKENS = ('Drift', 'D1', 'RC1', 'RC2', 'PrivateProof', 'PRIVATE PROOF', 'variable proof', 'exploratory',
+              'TBD', 'No license granted', 'not a public release')
 GEOMETRY_TABLES = ('glyf', 'loca', 'gvar', 'hmtx', 'hhea', 'maxp', 'cmap', 'GPOS', 'post')
 STATICS = ((100, 'Thin'), (400, 'Regular'), (900, 'Black'))
 
@@ -47,8 +55,10 @@ def names_of(font):
 def name_variable(f):
     for nid, text in ((1, f'{FAMILY} Thin'), (2, 'Regular'), (3, f'{FAMILY}-Thin; {VERSION}'),
                       (4, f'{FAMILY} Thin'), (5, VERSION), (6, f'{FAMILY}-Thin'),
-                      (10, DESCRIPTION), (16, FAMILY), (17, 'Thin'), (25, FAMILY)):
+                      (10, DESCRIPTION), (16, FAMILY), (17, 'Thin'), (25, FAMILY),
+                      (0, COPYRIGHT), (13, LICENSE_DESC), (14, LICENSE_URL)):
         set_name(f, nid, text)
+    f['OS/2'].fsType = FS_TYPE
     # fvar instance labels: 100 Thin, 400 Regular, 900 Black (900 is "Black" in
     # the CSS/OpenType weight scale; RC2 called it "Bold")
     thin_id = f['name'].addMultilingualName({'en': 'Thin'}, f, minNameID=256)
@@ -61,20 +71,22 @@ def name_variable(f):
             inst.subfamilyNameID = black_id
     used = {a.axisNameID for a in f['fvar'].axes} | {i.subfamilyNameID for i in f['fvar'].instances}
     f['name'].names = [r for r in f['name'].names if r.nameID < 256 or r.nameID in used]
-    f['head'].fontRevision = 1.0
+    f['head'].fontRevision = 1.001
 
 
 def name_static(f, w, style):
     fam1 = FAMILY if style == 'Regular' else f'{FAMILY} {style}'
     for nid, text in ((1, fam1), (2, 'Regular'), (3, f'{FAMILY}-{style}; {VERSION}'),
                       (4, f'{FAMILY} {style}'), (5, VERSION), (6, f'{FAMILY}-{style}'),
-                      (10, DESCRIPTION), (16, FAMILY), (17, style)):
+                      (10, DESCRIPTION), (16, FAMILY), (17, style),
+                      (0, COPYRIGHT), (13, LICENSE_DESC), (14, LICENSE_URL)):
         set_name(f, nid, text)
+    f['OS/2'].fsType = FS_TYPE
     f['name'].names = [r for r in f['name'].names if r.nameID < 256 and r.nameID != 25]
     f['OS/2'].usWeightClass = w
     f['OS/2'].fsSelection = (f['OS/2'].fsSelection & ~0b100001) | 0b1000000   # REGULAR, not bold/italic
     f['head'].macStyle = 0
-    f['head'].fontRevision = 1.0
+    f['head'].fontRevision = 1.001
 
 
 def main():
@@ -119,7 +131,12 @@ def main():
             problems.append((fn, 'postscript name', ps))
         if len(f.getBestCmap()) != 77 or f['maxp'].numGlyphs != 78:
             problems.append((fn, 'coverage', len(f.getBestCmap()), f['maxp'].numGlyphs))
-    report['old_title_or_geometry_problems'] = problems
+        for nid, want in ((0, COPYRIGHT), (13, LICENSE_DESC), (14, LICENSE_URL), (5, VERSION)):
+            if info['names'].get(nid) != want:
+                problems.append((fn, 'name', nid, info['names'].get(nid)))
+        if f['OS/2'].fsType != FS_TYPE:
+            problems.append((fn, 'fsType', f['OS/2'].fsType))
+    report['old_title_geometry_or_metadata_problems'] = problems
     json.dump(report, open(os.path.join(OUT, 'validation.json'), 'w'), indent=1, ensure_ascii=False)
     print(json.dumps(report, indent=1, ensure_ascii=False))
 
