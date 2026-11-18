@@ -1,9 +1,10 @@
 """Nitor specimen video frames (private; not a public release). 1080 x 1350, 30 fps, 24.5 s, silent.
 
-Built from the approved v6 script (drift1/video/make_frames_d1_v6.py, unchanged) with
-TEXT-ONLY edits so no working title is visible: the weight-build hero word is "Nitor",
-the cascade word "drift" is "glide", and the end card reads "Nitor". Same scenes,
-timing, motion, CRT finish and real wght axis interpolation as v6.
+This file is complete on its own (standard library and Pillow only) and is the source
+of video/Nitor-specimen.mp4. It was derived from an earlier specimen script that is not
+part of this repository, with text-only changes: the weight-build word is "Nitor", a
+cascade word is "glide", and the end card reads "Nitor". Only the virtual camera and
+the real wght axis move.
 Usage: python3.11 nitor/video/make_frames_nitor.py <Nitor-VF.ttf> <frames_dir> <qa.json>
 """
 import json

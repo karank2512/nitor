@@ -53,7 +53,9 @@ tables as its TTF.
 
 ## Installing
 
-These files are for private use while no licence is in place.
+No licence has been granted, so no permission is given to use, install or
+embed these fonts until the owner decides on a licence. The installation and
+web steps below describe how they would be used once a licence allows it.
 
 - **macOS:** double-click a `.ttf` file and choose *Install Font* in Font Book.
 - **Windows:** right-click a `.ttf` file and choose *Install*.
