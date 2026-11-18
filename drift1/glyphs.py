@@ -9,8 +9,8 @@ Idea: invert the usual stress. Verticals are hairlines; every horizontal
 (arch tops, bowl tops/bottoms, bars) carries the weight. One rule gives the
 character: wherever strokes meet or bottom out, a horizontal band sits there
 (bars overhang the letter, v/w bottom out on a flat band, x and k carry a
-band through their junction). On a weight axis only the horizontals swell,
-so the type "builds" like stacked scanlines.
+band through their junction). On a weight axis the horizontals swell much
+more than the verticals, so the type "builds" like stacked scanlines.
 
 Masters share point structure (fixed point counts per arc) so they
 interpolate: P = {'V': vertical weight, 'Hh': horizontal weight}.
