@@ -10,9 +10,11 @@ overhang the letter, `v` and `w` sit on a flat band, `x` and `k` carry a band
 through their junction, the dots on `i` and `j` are short horizontal bands,
 and the punctuation dots are near-square blocks.
 
-On the weight axis only the horizontals swell. At 100 the face is a fine
-monoline; at 900 the horizontals are heavy bands against hairline stems, so
-a word appears to build up line by line, like stacked scanlines.
+On the weight axis the horizontals grow much more than the verticals: from 100
+to 900 the horizontal stroke goes from 22 to 132 units (six times), while the
+vertical stroke goes from 18 to 40 (just over twice). At 100 the face is a
+fine near-monoline; at 900 the horizontals are heavy bands against thin stems,
+so a word appears to build up line by line, like stacked scanlines.
 
 ## Metrics
 

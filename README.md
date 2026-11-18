@@ -20,8 +20,9 @@ holder is still to be confirmed.** See [LICENSE](LICENSE).
 
 Named instances: Thin (100), Regular (400), Black (900). The default
 instance is the thinnest end of the axis, so set a weight explicitly when you
-use the variable font. Only the horizontals change across the axis; the
-hairline verticals stay almost the same.
+use the variable font. Across the axis the horizontals grow much more than the
+verticals: the horizontal stroke goes from 22 to 132 units, the vertical stroke
+from 18 to 40.
 
 ## Character coverage
 
