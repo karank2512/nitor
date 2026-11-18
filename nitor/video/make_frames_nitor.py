@@ -1,4 +1,4 @@
-"""Nitor specimen video frames (private; not a public release). 1080 x 1350, 30 fps, 24.5 s, silent.
+"""Nitor specimen video frames (specimen media; not licensed). 1080 x 1350, 30 fps, 24.5 s, silent.
 
 This file is complete on its own (standard library and Pillow only) and is the source
 of video/Nitor-specimen.mp4. It was derived from an earlier specimen script that is not

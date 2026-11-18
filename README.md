@@ -9,8 +9,9 @@ weight increases the letters build up like stacked scanlines.
 
 Status: **the fonts, their build source and the font documentation are
 licensed under the SIL Open Font License 1.1, with Reserved Font Name "Nitor". The specimen images and
-video are not licensed. This repository is private and not publicly
-released.** See [LICENSE](LICENSE) and [OFL.txt](OFL.txt).
+video are not licensed: they can be viewed here, but no permission to reuse
+them is granted. No packaged release has been published.** See
+[LICENSE](LICENSE) and [OFL.txt](OFL.txt).
 
 ![Nitor specimen](images/nitor-specimen.png)
 

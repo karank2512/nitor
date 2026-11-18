@@ -5,8 +5,8 @@ verticals, weight carried by the horizontals. Original drawings made in this
 project. The fonts, their build source and the font documentation are licensed
 under the SIL Open Font License 1.1 with Reserved Font Name "Nitor" (see
 ../OFL.txt and ../LICENSE); the specimen video and its scripts in nitor/video/
-are not licensed, even though their build commands are listed below. The
-repository is private and not publicly released.
+are not licensed, even though their build commands are listed below. No
+packaged release has been published.
 
 Family name selected by Karan on 2026-11-18. The shapes and kerning are exactly
 the accepted D1 RC2 proof; only names and metadata changed.

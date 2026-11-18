@@ -1,13 +1,13 @@
 # Nitor release checklist
 
-The repository is **karank2512/nitor** (private, default branch `main`).
-It is **not** publicly released. Ticked items are done; everything unticked is
-still open. The fonts' shapes and kerning are accepted and must not change;
+The repository is **karank2512/nitor** (public, default branch `main`).
+No packaged release (tag or GitHub release) has been published. Ticked items
+are done; everything unticked is still open. The fonts' shapes and kerning are accepted and must not change;
 every remaining fix below is names, metadata or documentation only.
 
 ## Done
-- [x] Repository renamed from `original-font` to `nitor`, keeping its history,
-      content and private visibility; the old URL redirects.
+- [x] Repository renamed from `original-font` to `nitor`, keeping its history
+      and content; the old URL redirects.
 - [x] No document depends on the repository name.
 - [x] Final fonts named consistently: family `Nitor`; `Nitor-Thin`,
       `Nitor-Regular`, `Nitor-Black`; variable font `Nitor-VF` (`wght` 100–900,
@@ -36,19 +36,19 @@ every remaining fix below is names, metadata or documentation only.
 - [x] README, LICENSE and `nitor/README.md` updated to the licence and its
       scope.
 
-## Open (owner decisions; blocking any public release)
-- [ ] **Specimen media.** The images in `images/` and the video in `video/`
-      (and its scripts in `nitor/video/`) are deliberately not licensed. Decide
-      separately whether and how to license them.
-- [ ] **Git history.** Commits carry the author's name and email, and the
-      development folders (`stage0/`, `r4/`, `diag/`, `drift1/`) contain
-      working titles and personal references. Decide whether the history and
-      those folders may become public as they are (`drift1/` is needed by the
-      build).
-- [ ] **Visibility / public release.** Stays private until separately
-      approved.
+- [x] **Visibility (owner-approved):** the repository is public, with its
+      history and development folders (`stage0/`, `r4/`, `diag/`, `drift1/`)
+      as they are. History contains superseded working names and earlier
+      private-proof font metadata.
 
-## Remaining tidy-ups (docs only, before any public release)
+## Open
+- [ ] **Specimen media.** The images in `images/` and the video in `video/`
+      (and its scripts in `nitor/video/`) are deliberately not licensed: they
+      can be viewed, but no reuse permission is granted. Licensing them is a
+      separate decision.
+- [ ] **Packaged release.** No tag or GitHub release has been published.
+
+## Remaining tidy-ups (docs only)
 - [ ] `nitor/README.md` and `nitor/build_nitor.py` still mention working
       titles of the intermediate build steps; reword or explain them.
 - [ ] Optional: add a STAT table and PostScript names for the variable font's
